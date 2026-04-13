@@ -4,7 +4,7 @@ import { SRGBColorSpace, type Mesh } from "three";
 
 export function EarthSphere() {
   const meshRef = useRef<Mesh>(null);
-  const texture = useTexture("/earth-blue-marble.jpg", (t) => {
+  const texture = useTexture(`${import.meta.env.BASE_URL}earth-blue-marble.jpg`, (t) => {
     t.colorSpace = SRGBColorSpace;
     t.anisotropy = 16;
   });
